@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+.header {
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #8a2b06;
+  z-index: 1;
+  height: 6rem;
+  width: 100%;
+  padding: 0 5%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ff9f00;
+  margin: 10px 25px;
+}
+
+.logoImage {
+  margin: 0 10px 20px 0;
+}
+
+.logo_title {
+  text-decoration: none;
+  border: 0;
+  color: white;
+  width: 14rem;
+}
+.logo_title:hover {
+  border: 2px solid white;
+}
+
+.search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 14px;
+  margin: 0 10px;
+  justify-content: center;
+  width: 80%;
+}
+
+.search_input {
+  height: 16px;
+  padding: 15px;
+  border: none;
+  width: 80%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: 0;
+  font: inherit;
+}
+
+.search_icon {
+  width: 23px;
+  height: 30px !important;
+  background-color: #ff9f00;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cart {
+  text-align: center;
+  margin-right: 40px;
+  width: 20%;
+  height: 100%;
+}
+
+.cart .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  height: 100%;
+}
+
+.first_row {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.second_row {
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+.first_row:hover,
+.second_row:hover {
+  border-color: white;
+  border: 2px solid;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.third_row {
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.third_row:hover {
+  background-color: #4d1601;
+  padding: 0.3rem;
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+.third_row:hover {
+  background-color: #4d1601;
+  padding: 0.4rem;
+
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+}

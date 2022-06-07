@@ -1,0 +1,62 @@
+.slider3 {
+  border: none;
+  width: 89%;
+
+  height: fit-content;
+}
+
+.slider3 .slick-prev {
+  left: -10;
+  border-radius: 22px;
+}
+.slider3 .slick-next {
+  right: -12px;
+  border-radius: 22px;
+}
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+.slick-dots.custom-indicator li {
+  width: 50px;
+  height: 50px;
+  bottom: -50px;
+  border-radius: 10px;
+  opacity: 0.5;
+  object-fit: content;
+  height: fit-content;
+}
+.custom-indicator li.slick-active {
+  filter: grayscale(0);
+  opacity: 1;
+}
+.slick-track {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Set the tracks height to 70% of the view port height */
+}
+
+.slick-slide {
+  display: flex !important;
+  height: inherit !important;
+  margin-top: 0;
+}
+
+.slider3 .slick-slide img {
+  object-fit: contain; /* be aware that this doesn't work on IE */
+  height: 44vh;
+  width: 100%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-slide {
+  margin-left: 2px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -2px;
+}

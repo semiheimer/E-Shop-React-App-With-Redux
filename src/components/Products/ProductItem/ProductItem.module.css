@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  height: 26rem;
+  background-color: white;
+  z-index: 1;
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 8px;
+}
+.product .navlink {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.product .navlink > img {
+  width: 88%;
+  max-height: 90%;
+  object-fit: contain;
+  flex: 1 1 0%;
+  text-align: center;
+  overflow: auto;
+  outline: none;
+  aspect-ratio: 1/1.2;
+}
+.product button {
+  background: #ff9f00;
+  border: 1px solid white;
+  color: #111;
+  cursor: pointer;
+  border-radius: 7px;
+  display: block;
+}
+.product > button:hover {
+  border-color: #a88734 #9c7e31 #846a29;
+  color: white;
+}
+.product .rating {
+  display: flex;
+  justify-content: left;
+}
