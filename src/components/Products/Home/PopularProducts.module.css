@@ -2,6 +2,7 @@
   display: block;
   width: 100%;
   height: 28rem;
+  max-width: 100vw;
 }
 .popular__products {
   display: flex;

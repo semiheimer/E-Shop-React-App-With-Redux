@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import classes from "./PopularProducts.module.css";
 function PopularProducts() {
   const products = useSelector((state) =>
-    state.products.products?.filter((item, key) => key < 5)
+    state.products.products?.filter((item, key) => key < 4)
   );
 
   // if (isLoading) {
