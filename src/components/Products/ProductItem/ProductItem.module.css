@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 5px;
-  height: 26rem;
+  height: auto;
   background-color: white;
   z-index: 1;
   border: 1px solid rgb(229, 229, 229);
