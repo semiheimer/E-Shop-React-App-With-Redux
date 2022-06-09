@@ -1,5 +1,5 @@
 .popular_row {
-  width: 100%;
+  width: 91%;
   height: 26rem;
 }
 .popular__products {
@@ -7,8 +7,4 @@
 
   justify-content: space-around;
   align-items: center;
-
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 60px;
 }
