@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProductItem from "../ProductItem/ProductItem";
 import { useSelector } from "react-redux";
 import classes from "./PopularProducts.module.css";
+const hasWindow = typeof window !== "undefined";
+function getWindowDimensions() {
+  const width = hasWindow ? window.innerWidth : null;
+
+  if (width <= 480) return 1;
+  if (width <= 600) return 2;
+  if (width <= 1024) return 3;
+  if (width <= 1250) return 4;
+  if (width <= 1500) return 5;
+}
+
 function PopularProducts() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+  useEffect(() => {
+    if (hasWindow) {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, [hasWindow]);
+
   const products = useSelector((state) =>
-    state.products.products?.filter((item, key) => key < 3)
+    state.products.products?.filter((item, key) => key < windowDimensions)
   );
 
   // if (isLoading) {
