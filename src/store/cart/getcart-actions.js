@@ -28,7 +28,7 @@ export const getCartData = () => {
         cartActions.replaceCart({
           items: cartData.items || [],
           totalQuantity: cartData.totalQuantity || 0,
-          subTotalPrice: cartData.totaQuantity || 0,
+          subTotalPrice: cartData.subTotalPrice || 0,
         })
       );
     } catch (error) {

@@ -6,10 +6,10 @@ import SubTotal from "./SubTotal";
 import { useSelector } from "react-redux";
 
 function Checkout() {
-  const cartData = useSelector((state) => state.cart.items);
-  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  const subTotal = useSelector((state) => state.cart.subTotalPrice);
-
+  const { totalQuantity, subTotalPrice, items } = useSelector(
+    (state) => state.cart
+  );
+  const cartData = items;
   const cartList = cartData.map((item) => (
     <CheckoutItem key={item.id} item={item} />
   ));
@@ -23,15 +23,17 @@ function Checkout() {
           {cartList}
         </div>
         <div className={classes.subtotal}>
-          {`${totalQuantity} item(s): `}{" "}
+          {`${totalQuantity} item(s): `}
           <strong>
             <small>$</small>
-            {`${subTotal}`}
+            {`${subTotalPrice
+              .toFixed(2)
+              .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}`}
           </strong>
         </div>
       </div>
       <div className={classes.checkout_right}>
-        <SubTotal subTotal={subTotal} totalQuantity={totalQuantity} />
+        <SubTotal subTotal={subTotalPrice} totalQuantity={totalQuantity} />
       </div>
     </div>
   );

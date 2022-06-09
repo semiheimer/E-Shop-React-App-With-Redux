@@ -26,7 +26,7 @@ const ProductItem = (props) => {
   return (
     <div className={classes.product}>
       <NavLink className={classes.navlink} to={`/products/${props.id}`}>
-        <img src={`${props.image}`} alt="desc"/>
+        <img src={`${props.image}`} alt="desc" />
       </NavLink>
       <p style={{ display: "block", margin: "0", height: "3rem" }}>
         {props.title}

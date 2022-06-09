@@ -1,5 +1,5 @@
 import classes from "./Home.module.css";
-import backgroundImage from "../../../assets/items2.jpg";
+import backgroundImage from "../../../assets/backgroundImage.jpg";
 import { useSelector } from "react-redux";
 import TopProducts from "./TopProducts";
 import PopularProducts from "./PopularProducts";

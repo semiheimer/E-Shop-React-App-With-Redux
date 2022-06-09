@@ -54,7 +54,9 @@ function CheckoutItem({ item }) {
           {`${item.quantity} item(s): `}
           <strong>
             <small>$</small>
-            {`${item.totalPrice}`}
+            {`${item.totalPrice
+              .toFixed(2)
+              .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}`}
           </strong>
         </p>
       </div>

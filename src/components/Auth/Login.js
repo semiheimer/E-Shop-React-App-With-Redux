@@ -20,9 +20,8 @@ function Login() {
 
   useEffect(() => {
     if (isError) toast.error(message);
-    if (user) {
-      navigate("/");
-    }
+    if (user) navigate("/");
+
     dispatch(reset()); // bu gerekli mi?
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
@@ -32,7 +31,6 @@ function Login() {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
     dispatch(login({ email: enteredEmail, password: enteredPassword }));
-    navigate("/");
   };
 
   return (
