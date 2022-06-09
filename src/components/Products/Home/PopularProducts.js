@@ -8,9 +8,8 @@ function getWindowDimensions() {
 
   if (width <= 480) return 1;
   if (width <= 600) return 2;
-  if (width <= 1024) return 3;
-  if (width <= 1250) return 4;
-  if (width <= 1500) return 5;
+  if (width <= 1024) return 4;
+  else return 5;
 }
 
 function PopularProducts() {

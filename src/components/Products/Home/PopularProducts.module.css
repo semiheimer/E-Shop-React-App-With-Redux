@@ -1,14 +1,13 @@
 .popular_row {
-  display: block;
   width: 100%;
-  height: 28rem;
+  height: 26rem;
 }
 .popular__products {
   display: flex;
 
   justify-content: space-around;
   align-items: center;
-  width: auto;
+
   margin-left: auto;
   margin-right: auto;
   padding: 0 60px;
