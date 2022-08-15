@@ -1,5 +1,5 @@
 ![alt mainpage](public/allyouneed-react.png)
-![alt productdetail](pdetail.png)
+![alt productdetail](public/pdetail.png)
 ![alt cart](public/cart.png)
 ![alt login](public/login.png)
 
