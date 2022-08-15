@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialCartState = {
   items: [],
@@ -7,7 +7,7 @@ const initialCartState = {
   subTotalPrice: 0,
 };
 const cartSlice = createSlice({
-  name: "cart",
+  name: 'cart',
   initialState: initialCartState,
   reducers: {
     replaceCart(state, action) {
@@ -37,6 +37,7 @@ const cartSlice = createSlice({
     addItemToCart(state, action) {
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
+
       state.totalQuantity += 1;
       state.subTotalPrice += newItem.price;
       state.cartStatus = true;
@@ -51,6 +52,7 @@ const cartSlice = createSlice({
           rating: newItem.rating,
         });
       } else {
+        //array mutating but not important with IMMUR
         existingItem.quantity += 1;
         existingItem.totalPrice += newItem.price;
       }

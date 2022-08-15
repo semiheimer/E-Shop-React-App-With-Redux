@@ -26,10 +26,10 @@ function PopularProducts() {
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, [hasWindow]);
+  }, []);
 
   const products = useSelector((state) =>
-    state.products.products?.filter((item, key) => key < windowDimensions)
+    state.products.products?.filter((_, key) => key < windowDimensions)
   );
 
   // if (isLoading) {

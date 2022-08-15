@@ -1,20 +1,28 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import authService from "./auth-service";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import authService from './auth-service';
 
 // Get user from localStorage
-const user = JSON.parse(localStorage.getItem("user"));
+//const user = JSON.parse(localStorage.getItem("user"));
+const getLocalStorageValue = () => {
+  const storedValue = window.localStorage.getItem('user');
 
+  return storedValue ? storedValue : null;
+};
+// const user =
+//   typeof window !== 'undefined'
+//     ? JSON.parse(localStorage.getItem('user'))
+//     : null;
 const initialAuthState = {
-  user: user ? user : null,
+  user: getLocalStorageValue(),
   isError: false,
   isSuccess: false,
   isLoading: false,
-  message: "",
+  message: '',
 };
 
 // Register user
 export const register = createAsyncThunk(
-  "auth/register",
+  'auth/register',
   async (user, thunkAPI) => {
     try {
       const data = await authService.register(user);
@@ -31,7 +39,7 @@ export const register = createAsyncThunk(
   }
 );
 export const passwordChange = createAsyncThunk(
-  "auth/passwordchange",
+  'auth/passwordchange',
   async (user, thunkAPI) => {
     try {
       return await authService.passwordChange(user);
@@ -48,7 +56,7 @@ export const passwordChange = createAsyncThunk(
 );
 
 // Login user
-export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
+export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
   try {
     const data = await authService.login(user);
     return data;
@@ -61,19 +69,19 @@ export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
   }
 });
 
-export const logout = createAsyncThunk("auth/logout", async () => {
+export const logout = createAsyncThunk('auth/logout', async () => {
   await authService.logout();
 });
 
 export const authSlice = createSlice({
-  name: "auth",
+  name: 'auth',
   initialState: initialAuthState,
   reducers: {
     reset: (state) => {
       state.isLoading = false;
       state.isSuccess = false;
       state.isError = false;
-      state.message = "";
+      state.message = '';
       state.user = null;
     },
   },
