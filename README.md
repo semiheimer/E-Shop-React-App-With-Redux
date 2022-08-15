@@ -1,4 +1,7 @@
-![alt text](public/allyouneed-react.png)
+![alt mainpage](public/allyouneed-react.png)
+![alt productdetail](pdetail.png)
+![alt cart](public/cart.png)
+![alt login](public/login.png)
 
 # Getting Started with Create React App
 
