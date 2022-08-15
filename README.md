@@ -1,4 +1,4 @@
-![alt text](public\allyouneed-react.png)
+![alt text](public/allyouneed-react.png)
 
 # Getting Started with Create React App
 
